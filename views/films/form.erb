@@ -1,0 +1,20 @@
+<form action="/<%= @film.id %>" method="FILM">
+
+  <div>
+    <label>Film title</label>
+    <input type="text" name="title" placeholder="Please enter film title" value="<%= @film.title %>">
+  </div>
+
+  <div>
+    <label>Film release date</label>
+    <textarea name="body" placeholder = "Please enter date"><%= @film.body %></textarea>
+  </div>
+
+    <% if @film.id %>
+    <input type="hidden" name="_method" value="PUT">
+    <% end %>
+<!-- if this post doesnt exist dont do this, let it create new one, if it does exist then add in this hidden field override with a put method -->
+  <div>
+    <input type="submit" value="Save Film">
+  </div>
+</form>
