@@ -4,7 +4,7 @@ configure :development do
   register Sinatra::Reloader
 end
 
-# sets root as the parent-directory of the current file
+# sets root as the parent-directory of the current files
   set :root, File.join(File.dirname(__FILE__), '..')
 
   # sets the view directory correctly
